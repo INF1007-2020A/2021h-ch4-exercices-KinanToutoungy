@@ -1,25 +1,39 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+1) Vérifier si le nombre de caractères d’une chaîne de caractères est pair
+2) Supprimer le 3ème caractère d’une chaîne de caractères
+3) Remplacer un caractère d’une chaîne de caractère par un autre
+4) Renvoyer le nombre d’occurrences d’un caractère dans une chaîne de caractères, sans utiliser de fonctions avancées
+5) Rechercher le nombre de mots dans une phrase donnée
+"""
+
 
 def is_even_len(string: str) -> bool:
-    pass
+    if len(string) % 2:
+        return True
+
+    return False
 
 
 def remove_third_char(string: str) -> str:
-    pass
+    new_string = string[:2] + string[3:]
+
+    return new_string
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    pass
+    new_string = string.replace(new_char, old_char)
 
+    return new_string
 
 def get_number_of_char(string: str, char: str) -> int:
-    pass
+    return string.count(char)
 
 
 def get_number_of_words(sentence: str, word: str) -> int:
-    pass
+    return sentence.count(word)
 
 
 def main() -> None:
